@@ -41,12 +41,8 @@ cv2.setMouseCallback('my_drawing', draw_rectangle)
 while True:  # Runs forever until we break with Esc key on keyboard
     # Shows the image window
     cv2.imshow('my_drawing', img)
-    # EXPLANATION FOR THIS LINE OF CODE:
-    # https://stackoverflow.com/questions/35372700/whats-0xff-for-in-cv2-waitkey1/39201163
 
     # CHECK TO SEE IF ESC WAS PRESSED ON KEYBOARD
     if cv2.waitKey(1) & 0xFF == 27:
         break
-# Once script is done, its usually good practice to call this line
-# It closes all windows (just in case you have multiple windows called)
 cv2.destroyAllWindows()
